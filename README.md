@@ -91,3 +91,18 @@ Run it manually from repo root with:
 ```bash
 uv run ty check --no-progress
 ```
+
+## Project lineage
+
+`sandwich-pipeline` is part of a long-running lineage of BYU Animation pipeline repositories. Each capstone pipeline has inherited ideas, conventions, tools, infrastructure, or hard-earned lessons from the projects before it, even when the implementation was largely rewritten.
+
+A `*` indicates a substantial ground-up rewrite.
+
+- [`sandwich-pipeline`](https://github.com/joseph-wardle/sandwich-pipeline/tree/prod)
+  - descended from [`bobo-pipeline`](https://github.com/DallinClark/bobo-pipeline/tree/prod)
+    - descended from [`dungeon-pipeline`](https://github.com/scottdmilner/dungeon-pipeline/tree/prod) `*`
+      - descended from [`accomplice_pipe`](https://github.com/Student-Accomplice-Pipeline-Team/accomplice_pipe) `*`
+        - descended from [`unfamiliar_pipe`](https://github.com/gabrieljreed/unfamiliar_pipe) `*`
+          - descended from [`BYU_anm_pipeline`](https://github.com/smartins1234/BYU_anm_pipeline) `*`
+            - descended from [`dccpipe`](https://github.com/byu-animation/dccpipe/tree/master)
+              - descended from earlier BYU Animation pipeline projects in the [`byu-animation`](https://github.com/byu-animation) organization
