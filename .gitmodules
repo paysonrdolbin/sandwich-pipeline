@@ -25,15 +25,15 @@
 	url = https://github.com/abstractfactory/maya-capture.git
 [submodule "pipeline/lib/tractor-lops"]
 	path = src/dcc/houdini/third_party/tractor-lops
-	url = git@github.com:joseph-wardle/tractor-lops.git
+	url = https://github.com/joseph-wardle/tractor-lops.git
 	branch = prod
 [submodule "pipeline/software/maya/scripts/aperture_git"]
 	path = src/dcc/maya/third_party/aperture_git
-	url = git@github.com:michaelharmonart/aperture.git
+	url = https://github.com/michaelharmonart/aperture.git
 	branch = main
 [submodule "pipeline/lib/y-rig"]
 	path = src/dcc/maya/third_party/y-rig
-	url = git@github.com:michaelharmonart/y-rig.git
+	url = https://github.com/michaelharmonart/y-rig.git
 [submodule "pipeline/lib/ae_SVG"]
 	path = src/dcc/houdini/third_party/ae_SVG
 	url = https://github.com/Aeoll/ae_SVG.git
