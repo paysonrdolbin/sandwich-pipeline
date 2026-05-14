@@ -99,6 +99,8 @@ class HShotFileManager(HFileManager):
         shot = cast(Shot, entity)
         self._set_playbar_ranges(shot)
         self._set_environment_paths(shot)
+        # update SHOT_SUBSTEPS variable
+        hou.putenv("SHOT_SUBSTEPS", str(shot.substeps))
 
     def _department_value(self) -> str:
         normalized = str(self._department or "").strip()
