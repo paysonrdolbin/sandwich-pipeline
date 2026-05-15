@@ -99,7 +99,8 @@ class HShotFileManager(HFileManager):
         shot = cast(Shot, entity)
         self._set_playbar_ranges(shot)
         self._set_environment_paths(shot)
-        # update SHOT_SUBSTEPS variable
+        # update SHOT_SUBSTEPS variable, this is read by the
+        # sync_motion_substeps HDA
         hou.putenv("SHOT_SUBSTEPS", str(shot.substeps))
 
     def _department_value(self) -> str:
