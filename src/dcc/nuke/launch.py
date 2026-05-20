@@ -8,6 +8,8 @@ from pathlib import Path
 from core.util.paths import (
     get_shared_telemetry_spool_dir,
     resolve_mapped_path,
+    get_src_path,
+    get_resources_path,
 )
 from env import Executables
 from framework.launcher import Launcher
@@ -23,8 +25,8 @@ class NukeLauncher(Launcher):
     ) -> None:
         this_path = Path(__file__).resolve()
         # this_path = `<repo>/src/dcc/nuke/launch.py`
-        src_path = this_path.parents[2]
-        repo_root = src_path.parent
+        src_path = get_src_path()
+        resources_path = get_resources_path()
 
         system = platform.system()
 
@@ -34,7 +36,7 @@ class NukeLauncher(Launcher):
             # survive the repo's location moving.
             "DCC_NUKE_THIRD_PARTY": str(this_path.parent / "third_party"),
             "NUKE_PATH": str(resolve_mapped_path(this_path.parent / "site")),
-            "OCIO": str(repo_root / "resources/ocio/sandwich-v01/config.ocio"),
+            "OCIO": str(resources_path / "/ocio/sandwich-v01/config.ocio"),
             "PIPE_TELEMETRY_SPOOL_DIR": str(get_shared_telemetry_spool_dir()),
             "PYTHONPATH": str(src_path),
             "QT_SCALE_FACTOR": os.getenv("NUKE_SCALE_FACTOR")

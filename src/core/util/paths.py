@@ -74,6 +74,10 @@ def get_repo_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
+def get_resources_path() -> Path:
+    return get_repo_root() / "resources"
+
+
 def get_function_source_code_url(func: FunctionType) -> str | None:
     """
     Returns a URL pointing to the source file and lines of the given function.
